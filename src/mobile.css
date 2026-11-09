@@ -1,0 +1,36 @@
+/* Fit Safari's changing viewport and the keyboard without disabling pinch zoom. */
+.app-shell { height: min(860px, calc(var(--app-viewport-height, 100dvh) - 40px)); }
+.attendance-view { touch-action: pan-x pinch-zoom; }
+.subject-selector, .subject-viewport, .subject-selector .subject-track button { touch-action: pan-y pinch-zoom; }
+.lesson-panel, .install-panel, .about-panel { overflow-y: auto; overscroll-behavior: contain; touch-action: pan-y; }
+.lesson-panel .lesson-facts, .lesson-panel .primary-button, .install-panel > *, .about-panel > * { flex-shrink: 0; }
+.lesson-panel .lesson-facts dt { flex-shrink: 0; }
+.lesson-panel .lesson-facts dd { text-align: right; overflow-wrap: anywhere; }
+.timeline, .settings-scroll, .history-records, .course-info, .notification-content { -webkit-overflow-scrolling: touch; }
+@media (max-width: 600px), (max-height: 500px) and (pointer: coarse) {
+  #root { place-items: start center; }
+  .app-shell { width: 100%; max-width: 600px; height: var(--app-viewport-height, 100dvh); max-height: none; border: 0; border-radius: 0; box-shadow: none; padding-left: max(22px, env(safe-area-inset-left)); padding-right: max(22px, env(safe-area-inset-right)); }
+}
+@media (orientation: landscape) and (max-height: 500px) {
+  .route-content { overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; }
+  .attendance-view { min-height: 430px; touch-action: pan-y pinch-zoom; }
+}
+@media (pointer: coarse) {
+  .wordmark, .history-button, .history-filter button, .motion-selector button, .text-button { min-height: 44px; }
+  .wordmark { min-width: 64px; }
+  .subject-selector { --rail-row: 44px; }
+  .target-setting input { min-height: 44px; }
+  .theme-option { min-height: 104px; }
+  .lesson-card { min-height: 84px; }
+  button { -webkit-touch-callout: none; }
+  .attendance-stage, .subject-selector { user-select: none; -webkit-user-select: none; }
+}
+@media (max-width: 350px) {
+  .week-selector { grid-template-columns: repeat(7, minmax(44px, 1fr)); overflow-x: auto; touch-action: pan-x; scrollbar-width: none; }
+  .week-selector::-webkit-scrollbar { display: none; }
+}
+@media (max-height: 600px) {
+  .lesson-panel > .calendar-sketch { width: 48px; height: 48px; margin: 18px 0; }
+  .lesson-panel .lesson-facts { margin-block: 15px; }
+  .lesson-panel .lesson-facts > div { padding-block: 13px; }
+}

@@ -1,0 +1,22 @@
+.notification-panel > h2 { flex-shrink: 0; }
+.notification-content { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; touch-action: pan-y; padding: 22px 1px 8px; }
+.notification-intro { display: flex; gap: 14px; align-items: center; margin-bottom: 23px; }
+.notification-symbol { display: grid; place-items: center; width: 48px; height: 48px; flex-shrink: 0; color: var(--yellow); background: var(--surface); border: 1px solid var(--line); border-radius: 15px; }
+.notification-intro p { font-size: 13px; color: var(--grey); line-height: 1.65; }
+.notification-example { background: var(--surface); border: 1px solid var(--line); border-radius: 17px; padding: 18px; margin-bottom: 20px; }
+.notification-example > span { display: block; font-size: 11px; color: var(--grey); margin-bottom: 14px; }
+.notification-example strong { display: block; font-size: 16px; font-weight: 600; line-height: 1.4; }
+.notification-example p { color: var(--soft); font-size: 13px; line-height: 1.6; margin-top: 7px; }
+.notification-example small { display: block; margin-top: 14px; font-size: 10px; color: var(--grey); }
+.notification-status { display: flex; align-items: center; gap: 9px; min-height: 30px; font-size: 13px; font-weight: 500; margin-bottom: 9px; }
+.notification-status i { width: 7px; height: 7px; border-radius: 50%; border: 1px solid var(--grey); }
+.notification-status.is-on i { background: var(--yellow); border-color: var(--yellow); }
+.notification-help, .notification-error { font-size: 13px; line-height: 1.6; margin: 10px 0 17px; color: var(--grey); }
+.notification-error { color: var(--white); border-left: 2px solid var(--yellow); padding-left: 12px; }
+.notification-content .primary-button { width: 100%; min-height: 48px; }
+.notification-content button:disabled { opacity: .5; }
+.connection-label { display: block; font-size: 12px; margin-top: 18px; margin-bottom: 9px; color: var(--soft); }
+#reminder-code { width: 100%; min-height: 48px; padding: 10px 13px; border: 1px solid var(--border); border-radius: 11px; background: var(--surface); color: var(--white); font-size: 16px; }
+.notification-refresh, .notification-disable { display: block; min-height: 44px; background: transparent; color: var(--yellow); font-size: 13px; padding: 10px 0; margin-top: 5px; text-align: left; }
+.notification-disable { color: var(--grey); }
+.notification-footnote { margin-top: 20px; padding-top: 17px; border-top: 1px solid var(--line); color: var(--grey); font-size: 11px; line-height: 1.65; }

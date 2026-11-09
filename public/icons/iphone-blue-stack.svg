@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="azure" x1="118" y1="116" x2="252" y2="250" gradientUnits="userSpaceOnUse"><stop stop-color="#2AA0FA"/><stop offset="1" stop-color="#2296F2"/></linearGradient>
+    <linearGradient id="blue" x1="118" y1="264" x2="252" y2="398" gradientUnits="userSpaceOnUse"><stop stop-color="#0B88DD"/><stop offset="1" stop-color="#087CD4"/></linearGradient>
+    <linearGradient id="cyan" x1="268" y1="162" x2="394" y2="398" gradientUnits="userSpaceOnUse"><stop stop-color="#62CEF1"/><stop offset="1" stop-color="#5CC7EF"/></linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="#101112"/>
+  <rect x="118" y="116" width="134" height="134" rx="28" fill="url(#azure)"/>
+  <rect x="118" y="264" width="134" height="134" rx="28" fill="url(#blue)"/>
+  <rect x="268" y="162" width="126" height="236" rx="28" fill="url(#cyan)"/>
+</svg>

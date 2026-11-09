@@ -1,0 +1,28 @@
+{
+	"$schema": "../node_modules/wrangler/config-schema.json",
+	"name": "attn-class-reminders",
+	"main": "index.js",
+	"compatibility_date": "2026-10-19",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"workers_dev": true,
+	"triggers": {
+		"crons": [
+			"* * * * *"
+		]
+	},
+	"vars": {
+		"APP_ORIGIN": "https://umt-everyday-7c9a.snappystoat64.chatgpt.site"
+	},
+	"observability": {
+		"enabled": true
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "attn-reminders",
+			"database_id": "5f39d094-be0f-41b5-9c55-8adcf61c0791"
+		}
+	]
+}
